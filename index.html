@@ -27,8 +27,9 @@
       padding: 8px 15px;
       border: none;
       cursor: pointer;
-      background: #fff;
+      background: #57398F;
       border-radius: 5px;
+      color: white;
     }
 
     iframe {
@@ -42,15 +43,15 @@
 <body>
 
   <nav>
-    <button onclick="loadPDF('pdf1.pdf')">Profile</button>
-    <button onclick="loadPDF('pdf2.pdf')">About</button>
-    <button onclick="loadPDF('pdf3.pdf')">Services</button>
-    <button onclick="loadPDF('pdf4.pdf')">Portfolio</button>
-    <button onclick="loadPDF('pdf5.pdf')">Team</button>
-    <button onclick="loadPDF('pdf6.pdf')">Contact</button>
+    <button onclick="loadPDF('cover.pdf')">Cover</button>
+    <button onclick="loadPDF('about us.pdf')">About</button>
+    <button onclick="loadPDF('services.pdf')">Services</button>
+    <button onclick="loadPDF('Our clients.pdf')">Cliets</button>
+    <button onclick="loadPDF('Accreditations.pdf')">Accreditations</button>
+    <button onclick="loadPDF('Contact us.pdf')">Contact</button>
   </nav>
 
-  <iframe id="viewer" src="pdf1.pdf#zoom=page-width"></iframe>
+  <iframe id="viewer" src="cover.pdf#zoom=page-width"></iframe>
 
   <script>
     function loadPDF(file) {
