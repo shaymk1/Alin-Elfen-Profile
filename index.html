@@ -6,16 +6,50 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Company Profile</title>
 <style>
-  body, html { margin: 0; padding: 0; font-family: sans-serif; }
-  nav { position: fixed; top: 0; width: 100%; background: #111; padding: 10px; display: flex; justify-content: center; gap: 5px; z-index: 10; flex-wrap: wrap;}
-  button { padding: 8px 12px; border: none; cursor: pointer; background: #57398F; color: white; border-radius: 5px;}
-  .section { width: 100%; }
-  .section img { width: 100%; height: auto; display: block; }
-  body { scroll-behavior: smooth; }
+  body, html { margin: 0; padding: 0; font-family: sans-serif; scroll-behavior: smooth; }
+  
+  /* Navigation bar */
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #111; /* Change to your brand color */
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+    z-index: 10;
+  }
+  button {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    background: #57398F; 
+    color: white;
+    border-radius: 5px;
+  }
+
+  /* Sections */
+  .section {
+    width: 100%;
+    min-height: 100vh; /* full screen height */
+  }
+  .section img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 1440px; /* optional: prevents huge images on desktop */
+    margin: auto;
+  }
+
+  /* Optional: add some spacing at bottom */
+  body::after { content:""; display:block; height:20px; }
 </style>
 </head>
 <body>
 
+<!-- Navigation -->
 <nav>
   <button onclick="scrollToSection('cover')">Cover</button>
   <button onclick="scrollToSection('about')">About Us</button>
@@ -25,6 +59,7 @@
   <button onclick="scrollToSection('contact')">Contact</button>
 </nav>
 
+<!-- Sections with compressed images -->
 <div class="section" id="cover"><img src="cover-i.jpg" alt="Cover"></div>
 <div class="section" id="about"><img src="about-us-i.jpg" alt="About Us"></div>
 <div class="section" id="services"><img src="services-i.jpg" alt="Services"></div>
@@ -34,7 +69,7 @@
 
 <script>
   function scrollToSection(id) {
-    document.getElementById(id).scrollIntoView({behavior:'smooth'});
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
   }
 </script>
 
