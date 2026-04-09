@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Profile</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111;
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .services, .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+    }
+
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #000;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Your Company Name</h1>
+    <p>Short tagline or description</p>
+    <a href="#contact" class="button">Contact Us</a>
+  </header>
+
+  <section>
+    <h2>About Us</h2>
+    <p>
+      Write a short description about the company. What you do, your mission,
+      and what makes you different.
+    </p>
+  </section>
+
+  <section>
+    <h2>Services</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Service One</h3>
+        <p>Short description of the service.</p>
+      </div>
+      <div class="card">
+        <h3>Service Two</h3>
+        <p>Short description of the service.</p>
+      </div>
+      <div class="card">
+        <h3>Service Three</h3>
+        <p>Short description of the service.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Portfolio</h2>
+    <div class="portfolio">
+      <div class="card">Project 1</div>
+      <div class="card">Project 2</div>
+      <div class="card">Project 3</div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: your@email.com</p>
+    <p>Phone: +27 xxx xxx xxx</p>
+  </section>
+
+  <footer>
+    <p>© 2026 Your Company Name</p>
+  </footer>
+
+</body>
+</html>

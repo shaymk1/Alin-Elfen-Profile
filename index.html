@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Company Profile</title>
+  <style>
+    body, html {
+      margin: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #111;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      z-index: 10;
+    }
+
+    button {
+      padding: 8px 15px;
+      border: none;
+      cursor: pointer;
+      background: #fff;
+      border-radius: 5px;
+    }
+
+    iframe {
+      margin-top: 50px;
+      width: 100%;
+      height: calc(100% - 50px);
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <button onclick="loadPDF('pdf1.pdf')">Profile</button>
+    <button onclick="loadPDF('pdf2.pdf')">About</button>
+    <button onclick="loadPDF('pdf3.pdf')">Services</button>
+    <button onclick="loadPDF('pdf4.pdf')">Portfolio</button>
+    <button onclick="loadPDF('pdf5.pdf')">Team</button>
+    <button onclick="loadPDF('pdf6.pdf')">Contact</button>
+  </nav>
+
+  <iframe id="viewer" src="pdf1.pdf#zoom=page-width"></iframe>
+
+  <script>
+    function loadPDF(file) {
+      document.getElementById('viewer').src = file + "#zoom=page-width";
+    }
+  </script>
+
+</body>
+</html>
